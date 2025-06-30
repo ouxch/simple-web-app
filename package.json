@@ -1,0 +1,39 @@
+{
+  "name": "simple-web-app",
+  "version": "1.0.0",
+  "description": "简单的前端网页应用项目模板",
+  "source": "src/index.html",
+  "scripts": {
+    "dev": "parcel src/index.html --open",
+    "build": "parcel build src/index.html --dist-dir dist",
+    "preview": "parcel src/index.html --dist-dir dist --no-cache",
+    "clean": "rimraf dist .parcel-cache",
+    "lint": "eslint src/**/*.{js,ts}",
+    "lint:fix": "eslint src/**/*.{js,ts} --fix",
+    "format": "prettier --write src/**/*.{js,ts,html,css,json}",
+    "type-check": "tsc --noEmit"
+  },
+  "keywords": [
+    "frontend",
+    "typescript",
+    "parcel",
+    "web-app"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.19.1",
+    "@typescript-eslint/parser": "^6.19.1",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "parcel": "^2.11.0",
+    "prettier": "^3.2.4",
+    "rimraf": "^5.0.5",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {},
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
