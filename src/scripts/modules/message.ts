@@ -9,6 +9,7 @@ export type MessageType = 'success' | 'error' | 'warning' | 'info';
  */
 export class MessageDisplay {
   private messageElement: HTMLElement | null;
+
   private hideTimeout: number | null = null;
 
   constructor(elementId: string = 'message') {

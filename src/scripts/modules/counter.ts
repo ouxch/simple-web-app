@@ -4,8 +4,9 @@ import { MathUtils } from '../utils/jsExample';
  * 计数器类
  * 用于管理点击计数功能
  */
-export class Counter {
+export default class Counter {
   private count: number = 0;
+
   private maxCount: number = 100;
 
   constructor(initialCount: number = 0, maxCount: number = 100) {
@@ -31,7 +32,7 @@ export class Counter {
    */
   decrement(): number {
     if (this.count > 0) {
-      this.count--;
+      this.count -= 1;
     }
     return this.count;
   }

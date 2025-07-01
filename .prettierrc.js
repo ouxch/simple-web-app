@@ -20,7 +20,7 @@ module.exports = {
   // 箭头函数，只有一个参数的时候，也需要括号
   arrowParens: 'avoid',
   // 每一行的宽度
-  printWidth: 80,
+  printWidth: 100,
   // 换行符使用 lf
   endOfLine: 'lf',
 };

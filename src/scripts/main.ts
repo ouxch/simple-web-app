@@ -1,19 +1,19 @@
-import { Counter } from './modules/counter';
+import Counter from './modules/counter';
 import { MessageDisplay } from './modules/message';
-import { greetUser } from './utils/helpers';
+import greetUser from './utils/helpers';
 
 // 应用程序主类
 class App {
   private counter: Counter;
+
   private messageDisplay: MessageDisplay;
 
   constructor() {
     this.counter = new Counter();
     this.messageDisplay = new MessageDisplay();
-    this.init();
   }
 
-  private init(): void {
+  public init(): void {
     this.setupEventListeners();
     this.displayWelcomeMessage();
   }
@@ -30,11 +30,11 @@ class App {
 
   private handleButtonClick(): void {
     const newCount = this.counter.increment();
-    this.updateCounterDisplay(newCount);
+    App.updateCounterDisplay(newCount);
     this.showClickMessage(newCount);
   }
 
-  private updateCounterDisplay(count: number): void {
+  private static updateCounterDisplay(count: number): void {
     const counterElement = document.getElementById('counter');
     if (counterElement) {
       counterElement.textContent = `点击次数: ${count}`;
@@ -72,5 +72,7 @@ class App {
 
 // 当 DOM 加载完成时启动应用
 document.addEventListener('DOMContentLoaded', () => {
-  new App();
+  // 创建应用程序实例
+  const app = new App();
+  app.init();
 });

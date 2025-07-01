@@ -48,7 +48,7 @@ export const MathUtils = {
    */
   randomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
-  }
+  },
 };
 
 /**
@@ -84,7 +84,7 @@ export const DOMUtils = {
     const element = document.createElement(tagName);
 
     // 设置属性
-    Object.keys(attributes).forEach(key => {
+    Object.keys(attributes).forEach((key) => {
       element.setAttribute(key, attributes[key]);
     });
 
@@ -118,7 +118,7 @@ export const DOMUtils = {
     if (element && typeof handler === 'function') {
       element.removeEventListener(event, handler);
     }
-  }
+  },
 };
 
 /**
@@ -176,5 +176,5 @@ export const StorageUtils = {
     } catch (error) {
       console.warn('清空本地存储失败:', error);
     }
-  }
+  },
 };
